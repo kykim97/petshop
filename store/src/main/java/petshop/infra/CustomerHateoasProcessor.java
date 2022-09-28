@@ -14,7 +14,6 @@ public class CustomerHateoasProcessor implements RepresentationModelProcessor<En
         model.add(Link.of(model.getRequiredLink("self").getHref() + "/createAccount4").withRel("createAccount4"));
         model.add(Link.of(model.getRequiredLink("self").getHref() + "/deleteAccount").withRel("deleteAccount"));
         model.add(Link.of(model.getRequiredLink("self").getHref() + "/createAvatar").withRel("createAvatar"));
-        model.add(Link.of(model.getRequiredLink("self").getHref() + "/newAPI").withRel("newAPI"));
 
         
         return model;

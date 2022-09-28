@@ -63,11 +63,6 @@ public class Customer  {
     }
     public void createAvatar(){
     }
-    public void newApi(){
-        NewApIed newApIed = new NewApIed(this);
-        newApIed.publishAfterCommit();
-
-    }
 
 
 

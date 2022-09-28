@@ -77,23 +77,4 @@ public class CustomerController {
 
 
 
-    @RequestMapping(value = "customers/{id}/newAPI",
-        method = RequestMethod.PUT,
-        produces = "application/json;charset=UTF-8")
-    public Customer newApi(@PathVariable(value = "id") Long id, HttpServletRequest request, HttpServletResponse response) throws Exception {
-            System.out.println("##### /customer/newApi  called #####");
-            Optional<Customer> optionalCustomer = customerRepository.findById(id);
-            
-            optionalCustomer.orElseThrow(()-> new Exception("No Entity Found"));
-            Customer customer = optionalCustomer.get();
-            customer.newApi();
-            
-            customerRepository.save(customer);
-            return customer;
-            
-    }
-    
-
-
-
 }
